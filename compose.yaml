@@ -1,0 +1,11 @@
+services:
+  books-bot:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - books-bot-data:/app/data
+
+volumes:
+  books-bot-data:
